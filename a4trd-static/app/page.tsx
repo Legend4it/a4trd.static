@@ -1,4 +1,8 @@
-export default function Home() {
+export default async function Home() {
+  const res = await fetch("https://dummyjson.com/test");
+  const data = await res.json();
+  console.log("Fetched data:", data);
+  
   return (
     <>
       <div className="container">
