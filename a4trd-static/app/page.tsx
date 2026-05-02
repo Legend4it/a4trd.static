@@ -2,7 +2,7 @@ export default async function Home() {
   const res = await fetch("https://dummyjson.com/test");
   const data = await res.json();
   console.log("Fetched data:", data);
-  
+
   return (
     <>
       <div className="container">
@@ -16,6 +16,7 @@ export default async function Home() {
         </p>
 
         <div className="badge">Stay tuned</div>
+        <p><i>Fetched data:</i> {JSON.stringify(data)}</p>
       </div>
 
       <footer>
